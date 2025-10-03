@@ -348,11 +348,16 @@ ul, li {
   gap: 30px;
   padding: 25px 20px;
   align-items: center;
+  position: relative;
 }
 
 .reason-item1 {
-  margin-bottom: 40px;
+  margin: 0 16px 40px 0;
   border-radius: 0 20px 20px 0;
+}
+
+.reason-item2-wrapper {
+  padding-left: 16px;
 }
 
 .reason-item2 {
