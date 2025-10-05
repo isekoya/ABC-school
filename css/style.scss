@@ -69,7 +69,6 @@ ul,li {
 .container {
   width: 100%;
   padding: 0 16px;
-  max-width: 860px;
   margin: auto;
 }
 
@@ -110,7 +109,7 @@ $hamburger-color: #fff;
   height: 2px;
   background-color: $hamburger-color;
   right: 20px;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 
 .hamburger-line1 {
@@ -132,7 +131,16 @@ $hamburger-color: #fff;
 }
   
 .open .hamburger-line2 {
+  left: 50%;
   opacity: 0;
+  animation: active-menu05-bar02 .8s forwards;
+}
+
+@keyframes active-menu05-bar02 {
+  
+  100% {
+    height: 0;
+  }
 }
   
 .open .hamburger-line3 {
@@ -341,25 +349,23 @@ $hamburger-color: #fff;
   background-color: $base-color;
   padding: 40px 0;
   margin-top: 35px;
+  overflow-x: hidden;
 }
 
 .reason-item1, .reason-item2 {
   background-color: #fff;
   display: flex;
-  max-width: 359px;
+  max-width: 95%;
   gap: 30px;
   padding: 25px 20px;
   align-items: center;
   position: relative;
+  justify-content: center;
 }
 
 .reason-item1 {
-  margin: 0 16px 40px 0;
+  margin: 0 0 40px;
   border-radius: 0 20px 20px 0;
-}
-
-.reason-item2-wrapper {
-  padding-left: 16px;
 }
 
 .reason-item2 {
@@ -374,17 +380,6 @@ $hamburger-color: #fff;
 
 .reason-text {
   font-size: 1.125rem;
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 $speech-color: #E9F1FB;
@@ -595,12 +590,12 @@ $speech-color: #E9F1FB;
 
 /* 左からスライドイン */
 .animate-item[data-animation="slide-left"] {
-  transform: translateX(-100px);
+  transform: translateX(-50%);
 }
 
 /* 右からスライドイン */
 .animate-item[data-animation="slide-right"] {
-  transform: translateX(100px);
+  transform: translateX(150%);
 }
 
 /* ズームイン */
@@ -654,6 +649,10 @@ $speech-color: #E9F1FB;
 
   h4 {
     font-size: 1.125rem;
+  }
+
+  .container {
+    max-width: 860px;
   }
 
   .header {
@@ -736,7 +735,6 @@ $speech-color: #E9F1FB;
   .reason-item1, .reason-item2 {
     max-width: 50%;
     height: 200px;
-    justify-content: center;
   }
 
   .voice {
